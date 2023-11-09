@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org/">
-<head th:replace="~{fragments :: head}">
+<head th:replace="fragments :: head">
 </head>
 <body>
 
-<div th:replace="~{fragments :: page-header}"></div>
+<div th:replace="fragments :: page-header"></div>
 
 <div class="container body-content">
 
@@ -12,7 +12,7 @@
 
   <!-- TODO #1 - Use a loop to display job results in a table. -->
   <table th:each="job: ${jobs}" class = "job-listing">
-
+    <!--        <tbody>-->
     <tr>
       <th>ID</th>
       <td th:text="${job.id}"></td>
@@ -37,7 +37,7 @@
       <th>Skill</th>
       <td th:text ="${job.coreCompetency}" ></td>
     </tr>
-
+    <!--        </tbody>-->
   </table>
 </div>
 

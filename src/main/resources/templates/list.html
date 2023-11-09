@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org/">
-<head th:replace="~{fragments :: head}"></head>
+<head th:replace="fragments :: head"></head>
 
 <body>
 
-<div th:replace="~{fragments :: page-header}"></div>
+<div th:replace="fragments :: page-header"></div>
 
 <div class="container body-content">
   <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
@@ -20,7 +20,7 @@
   <tr>
     <!-- TODO #2: Complete the View Jobs By Category Table. -->
 
-    <td></td> <!-- Feel free to remove or modify this element if necessary. -->
+    <!--                <td></td> &lt;!&ndash; Feel free to remove or modify this element if necessary. &ndash;&gt;-->
 
     <td th:each="category : ${tableChoices}">
       <ul>
@@ -28,6 +28,12 @@
           <a th:href="@{/list/jobs(column=${category.key},value=${item})}" th:text="${item}"></a>
         </li>
       </ul>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
     </td>
   </tr>
 </table>
