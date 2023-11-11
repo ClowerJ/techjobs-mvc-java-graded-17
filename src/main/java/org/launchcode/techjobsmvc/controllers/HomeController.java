@@ -18,6 +18,7 @@ public class HomeController {
         HashMap<String, String> actionChoices = new HashMap<>();
         actionChoices.put("search", "Search");
         actionChoices.put("list", "List");
+        actionChoices.put("all", "View All");
 
         model.addAttribute("actions", actionChoices);
 
